@@ -19,10 +19,13 @@ npm start
 
 ## Features 
 ### Search Movies 
-
+![Search](search.gif)
 ### Nominate Movies 
+![Nominate](add-delete.gif)
 ### Banner 
+![Banner](banner.gif)
 ### Save Data to Local Storage 
+![Local](local-storage.gif)
 ### UI/UX 
 
 ## Code Review 
