@@ -1,0 +1,55 @@
+@font-face {	
+    font-family: 'circular-std-book';	
+    src: url('../font/CircularStd-Book.woff') format('woff');	
+    font-weight: normal;	
+    font-style: normal;	
+}	
+
+.search {
+    display: flex; 
+    flex-direction: column;
+    width: 80%;
+    height: 150px;
+    background-color: white;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 2%;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+}
+
+.search-header {
+    font-family: circular-std-book, Arial, sans-serif;
+    font-size: 12pt;
+}
+
+.search-field {
+    display: flex; 
+    align-items: center;
+    border: 1px solid lightgray;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 2px;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    background-color: white;
+}
+
+.search-field > input {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 12pt;
+    font-family: circular-std-book, Arial, sans-serif;
+    color: #43474B;
+    border: none; 
+}
+
+.search-field > input:focus {
+    outline-width: 0;
+}
+
+.search-icon {
+    color: gray; 
+}

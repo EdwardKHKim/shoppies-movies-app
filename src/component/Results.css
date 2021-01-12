@@ -1,0 +1,53 @@
+@font-face {	
+    font-family: 'circular-std-book';	
+    src: url('../font/CircularStd-Book.woff') format('woff');	
+    font-weight: normal;	
+    font-style: normal;	
+}	
+  
+.results {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.result-item {
+    font-family: circular-std-book, Arial, sans-serif;
+    color: #43474B;
+    font-size: 12pt;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.movie-icon {
+    position: relative;
+    top: 2px; 
+    margin-right: 5px;
+    color: #43474B;
+}
+
+.nominate-btn {
+    border: 1px solid #377E62;
+    border-radius: 2px;
+    height: 35px;
+    width: 100px;
+    background-color: #377E62;
+    transition: all 0.25s ease-in;
+    font-family: circular-std-book, Arial, sans-serif;
+    font-size: 12pt;
+    color: white;
+    margin-left: 10px;
+}
+
+.nominate-btn:hover {
+    background-color: #1E4B3F;
+    border: 1px solid #1E4B3F;
+    color: white !important; 
+}
+
+.nominate-btn:disabled {
+    background-color: #FAF7EE;
+    color: #1E4B3F !important; 
+    border: 1px solid #FAF7EE; 
+}

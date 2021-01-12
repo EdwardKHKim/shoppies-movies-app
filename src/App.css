@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
-}
+@font-face {	
+  font-family: 'circular-std-black';	
+  src: url('./font/CircularStd-Black.woff') format('woff');	
+  font-weight: 900;	
+  font-style: normal;	
+}	
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@font-face {	
+  font-family: 'circular-std-bold';	
+  src: url('./font/CircularStd-Bold.woff') format('woff');	
+  font-weight: bold;	
+  font-style: normal;	
+}	
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {	
+  font-family: 'circular-std-medium';	
+  src: url('./font/CircularStd-Medium.woff') format('woff');	
+  font-weight: 500;	
+  font-style: normal;	
+}	
+
+@font-face {	
+  font-family: 'circular-std-book';	
+  src: url('./font/CircularStd-Book.woff') format('woff');	
+  font-weight: normal;	
+  font-style: normal;	
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: circular-std-bold, Arial, sans-serif;
+  font-size: 20pt;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+.App-description {
+  font-family: circular-std-bold, Arial, sans-serif;
+  font-size: 50pt;
+  margin-top: 2%;
+  color: #1E4B3F;
+}
+
+.App-search-results {
+  width: 39%;
+  background-color: white;
+  margin-left: 10%;
+  margin-right: 1%;
+  margin-top: 2%;
+  margin-bottom: 100px;
+  border-radius: 2px;
+  border: 1px solid lightgray;
+}
+
+.search-results-header {
+  font-family: circular-std-book, Arial, sans-serif;
+  font-size: 12pt;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.App-content {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.App-nominated {
+  width: 39%;
+  background-color: white;
+  margin-left: 0.85%;
+  margin-right: 9%;
+  margin-top: 2%;
+  margin-bottom: 100px;
+  border-radius: 2px;
+  border: 1px solid lightgray; 
+}
+
+.nominated-header {
+  font-family: circular-std-book, Arial, sans-serif;
+  font-size: 12pt;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.App-footer {
+  position: fixed;
+  height: 150px;
+  line-height: 150px;
+  background-color: #1E4B3F; 
+  display: flex; 
   flex-direction: column;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: white !important;
+  font-size: 12pt;
+  font-family: circular-std-book, Arial, sans-serif;
+  bottom: 0;
 }

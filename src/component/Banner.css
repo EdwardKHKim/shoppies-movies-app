@@ -1,0 +1,51 @@
+@font-face {	
+    font-family: 'circular-std-book';	
+    src: url('../font/CircularStd-Book.woff') format('woff');	
+    font-weight: normal;	
+    font-style: normal;	
+}
+
+@font-face {	
+    font-family: 'circular-std-medium';	
+    src: url('../font/CircularStd-Medium.woff') format('woff');	
+    font-weight: 500;	
+    font-style: normal;	
+}	
+
+.banner {
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #1E4B3F; 
+    align-items: center;
+}
+
+.banner-content {
+    display: flex;
+    font-family: circular-std-medium, Arial, sans-serif;
+    color: white;
+    font-size: 12pt;
+}
+
+.hand-emoji {
+    animation-name: wave-hand-animation; 
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes wave-hand-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(12.0deg) } 
+   20% { transform: rotate(-5.0deg) }
+   30% { transform: rotate(12.0deg) }
+   40% { transform: rotate(-5.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  
+  100% { transform: rotate( 0.0deg) }
+}
