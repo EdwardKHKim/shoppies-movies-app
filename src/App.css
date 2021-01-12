@@ -83,7 +83,7 @@
 }
 
 .App-footer {
-  position: fixed;
+  position: relative;
   height: 150px;
   line-height: 150px;
   background-color: #1E4B3F; 
@@ -94,5 +94,7 @@
   color: white !important;
   font-size: 12pt;
   font-family: circular-std-book, Arial, sans-serif;
+  left: 0;
   bottom: 0;
+  right: 0;
 }
