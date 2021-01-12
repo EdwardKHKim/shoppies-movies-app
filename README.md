@@ -25,11 +25,42 @@ The repository is a web application that allows users to search and nominate up 
 ### Nominations 
 **App.js**
 ```js 
+// Declare a new state variable, which we'll call "nominations" and set it to an empty array 
+// useState() function is a Hook that lets you add React state to function components
 const [nominations, setNominations] = useState([[]])
-``` declare a new state variable, which we'll call "nominations" and set it to an empty array. ```js useState()``` function is a Hook that lets you add React state to function components which is **./component/Nominations.js** in this web application. ```js <Nominations movies={ nominations } onClick={ removeNomination } /> ``` pass the "nominations" state variable as "movies" and the ```js removeNominations()``` function as the action to be completed ```onClick()```. 
-
+...
+// Removes the movie item from the "nominations" state variable
+const removeNomination = (movie) => {
+  for (let i = 0; i < nominations.length; i++) {
+    if (nominations[i] === movie) {
+      // Change button in Results to normal 
+      nominations[i].disabled = false 
+      nominations[i].buttonText = "Nominate"
+    }
+  }
+  
+  // Filter() declares a new list with the unwanted movie-item removed
+  const nominationsList = nominations.filter(
+    (nomination) => nomination.imdbID !== movie.imdbID
+  )
+  // If a movie item in Nominations is removed it setIsMaxNominations is always === false 
+  setIsMaxNominations(false)
+  
+  // "nominations" state varaible === nominationsList. 
+  setNominations(nominationsList)
+  
+  // Save the new nominationsList to local
+  saveNominationsToLocalStorage(nominationsList)
+}
+...
+return(
+  ...
+  // Pass "nominations" state variable as "movies" and removeNominations() as the onClick() action in the Nominations component
+  <Nominations movies={ nominations } onClick={ removeNomination } /> 
+  ...
+) 
+```
 **Nominations.js**
-```js prop.movies``` and ```js props.onClick(movie)```
 
 ### Banner 
 ```js
