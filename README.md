@@ -6,26 +6,45 @@ The repository is a web application that allows users to search and nominate up 
 ![Demo](demo-full.gif)
 
 ## Installation instructions 
-1. Clone and enter this respository.  
-```
-git clone https://github.com/EdwardKHKim/shoppies-movies-app.git
-cd shoppies-movies-app
-```
-2. Install all dependencies and launch live server. 
-```
-npm install 
-npm start 
-```
+- In your terminal ```cd Directory``` 
+  - Replace directory with a directory of your choice and hit enter
+- ```git clone https://github.com/EdwardKHKim/shoppies-movies-app.git``` and hit enter to clone this repository
+- ```cd shoppies-movies-app``` and hit enter to cd into the directory
+- Type ```npm install``` and hit enter to install all dependencies 
+- Type ```npm start``` and hit enter to run app locally
 
-## Features 
+## Code review 
 ### Search Movies 
-![Search](search.gif)
-### Nominate Movies 
-![Nominate](add-delete.gif)
-### Banner 
-![Banner](banner.gif)
-### Save Data to Local Storage 
-![Local](local-storage.gif)
-### UI/UX 
+```js
 
-## Code Review 
+```
+### Nominate Movies 
+```js
+return (
+        <form className="search" 
+            onSubmit={ handleSubmit }
+        >
+           <h5 className="search-header">
+               Movie title
+           </h5>
+           <div className="search-field">
+                <FiSearch className="search-icon" />
+                <input 
+                    value={ props.value }
+                    onChange={ handleChange }
+                    placeholder="Search movies"
+                ></input>
+           </div>
+       </form> 
+    ); 
+```
+### Banner 
+```js
+
+```
+### Save Data to Local Storage 
+```js
+
+```
+### UI/UX 
+The UI/UX was inspired by [Shopify](https://www.shopify.com/)'s main page. 
