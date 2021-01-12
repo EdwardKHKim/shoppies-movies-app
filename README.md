@@ -24,7 +24,9 @@ The repository is a web application that allows users to search and nominate up 
 ```
 ### Nominations 
 **App.js**
-```js const [nominations, setNominations] = useState([[]])``` declare a new state variable, which we'll call "nominations" and set it to an empty array. ```js useState()``` function is a Hook that lets you add React state to function components which is **./component/Nominations.js** in this web application. ```js <Nominations movies={ nominations } onClick={ removeNomination } /> ``` pass the "nominations" state variable as "movies" and the ```js removeNominations()``` function as the action to be completed ```onClick()```. 
+```js 
+const [nominations, setNominations] = useState([[]])
+``` declare a new state variable, which we'll call "nominations" and set it to an empty array. ```js useState()``` function is a Hook that lets you add React state to function components which is **./component/Nominations.js** in this web application. ```js <Nominations movies={ nominations } onClick={ removeNomination } /> ``` pass the "nominations" state variable as "movies" and the ```js removeNominations()``` function as the action to be completed ```onClick()```. 
 
 **Nominations.js**
 ```js prop.movies``` and ```js props.onClick(movie)```
