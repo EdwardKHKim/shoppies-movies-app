@@ -79,12 +79,38 @@ return (
 )
 ```
 ### Banner 
+**App.js** 
 ```js
-
+// Declare a new state variable, which we'll call "isMaxNominations" and set it to false
+// setIsMaxNominations(true) is declared when there are 5 movie items in the "nominations" state variable. 
+const [isMaxNominations, setIsMaxNominations] = useState(false); 
+...
+return(
+  // Pass boolean value and length of an array to determine if a banner should be shown
+  <Banner isMaxNominations = { isMaxNominations } nominations={ nominations.length } />
+)
 ```
 ### Save Data to Local Storage 
+**App.js** 
 ```js
-
+// useEffect() perform side effects in function components:
+useEffect(() => {
+  // Declare a variable, which we'll call "movieNominations" that contains all movie items stored in local storage
+  const movieNominations = JSON.parse(
+    localStorage.getItem('nominations')
+  )
+  if (movieNominations !== null) {
+    setNominations(movieNominations);
+  } else {
+    setNominations([])
+  }
+}, [])
+...
+// Save the list of movie items in the "nominations" state variable to local storage
+const saveNominationsToLocalStorage = ( nominations ) => {
+  localStorage.setItem('nominations', JSON.stringify(nominations))
+}
+...
 ```
 ### UI/UX 
 The UI/UX was inspired by [Shopify](https://www.shopify.com/)'s main page. 
