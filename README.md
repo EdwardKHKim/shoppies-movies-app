@@ -23,25 +23,46 @@ The repository is a web application that allows users to search and nominate up 
 
 ```
 ### Nominations 
+In **App.js**
+```js
+const [nominations, setNominations] = useState([[]]); 
+...
+useEffect(() => {
+  const movieNominations = JSON.parse(
+    localStorage.getItem('nominations')
+  )
+  if (movieNominations !== null) {
+    setNominations(movieNominations);
+  } else {
+    setNominations([])
+  }
+}, [])
+...
+return (
+  ...
+    <Nominations movies={ nominations } onClick={ removeNomination } />
+  ...
+)
+```
 In **Nominations.js**
 ```js
 return (
-        <form className="search" 
-            onSubmit={ handleSubmit }
-        >
-           <h5 className="search-header">
-               Movie title
-           </h5>
-           <div className="search-field">
-                <FiSearch className="search-icon" />
-                <input 
-                    value={ props.value }
-                    onChange={ handleChange }
-                    placeholder="Search movies"
-                ></input>
-           </div>
-       </form> 
-    ); 
+  <form className="search" 
+    onSubmit={ handleSubmit }
+  >
+    <h5 className="search-header">
+      Movie title
+    </h5>
+    <div className="search-field">
+      <FiSearch className="search-icon" />
+        <input 
+          value={ props.value }
+          onChange={ handleChange }
+          placeholder="Search movies"
+        ></input>
+    </div>
+  </form> 
+); 
 ```
 ### Banner 
 ```js
