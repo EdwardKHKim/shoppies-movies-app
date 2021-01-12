@@ -61,7 +61,23 @@ return(
 ) 
 ```
 **Nominations.js**
-
+```js 
+return (
+  <div className="nominations">
+    // Maps the movies which we passed in App.js as "nominations" state variable. 
+    { props.movies && props.movies.map((movie, index) => <div key={ index }>
+      <div className="nomination-item">
+        <BiAward className="award-icon" /> { movie.Title } ({ movie.Year}) <button
+          className="remove-btn"
+          // Perform removeNomination() for movie
+          onClick={ () => props.onClick(movie) }>
+            Remove
+          </button>
+       </div>
+    </div>)}
+  </div>
+)
+```
 ### Banner 
 ```js
 
