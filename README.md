@@ -20,6 +20,11 @@ The repository is a web application that allows users to search and nominate up 
 ```
 ### Nominate Movies 
 ```js
+
+```
+### Nominations 
+In **Nominations.js**
+```js
 return (
         <form className="search" 
             onSubmit={ handleSubmit }
